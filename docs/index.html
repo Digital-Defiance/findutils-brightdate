@@ -171,9 +171,15 @@
         height: 12px;
         border-radius: 50%;
       }
-      .dot-red   { background: #ff5f57; }
-      .dot-yellow { background: #febc2e; }
-      .dot-green { background: #28c840; }
+      .dot-red {
+        background: #ff5f57;
+      }
+      .dot-yellow {
+        background: #febc2e;
+      }
+      .dot-green {
+        background: #28c840;
+      }
 
       .terminal-body {
         padding: 1.25rem 1.5rem;
@@ -187,10 +193,18 @@
         overflow-x: auto;
       }
 
-      .prompt { color: var(--green); }
-      .cmd    { color: var(--text-bright); }
-      .out    { color: var(--yellow); }
-      .cmt    { color: #6b7399; }
+      .prompt {
+        color: var(--green);
+      }
+      .cmd {
+        color: var(--text-bright);
+      }
+      .out {
+        color: var(--yellow);
+      }
+      .cmt {
+        color: #6b7399;
+      }
 
       /* ── HERO CTA ── */
       .hero-ctas {
@@ -209,14 +223,18 @@
         padding: 0.55rem 1rem;
         border-radius: 6px;
         text-decoration: none;
-        transition: background 0.15s, border-color 0.15s;
+        transition:
+          background 0.15s,
+          border-color 0.15s;
       }
       .btn-primary {
         background: rgba(97, 175, 239, 0.18);
         border: 1px solid rgba(97, 175, 239, 0.45);
         color: var(--accent);
       }
-      .btn-primary:hover { background: rgba(97, 175, 239, 0.3); }
+      .btn-primary:hover {
+        background: rgba(97, 175, 239, 0.3);
+      }
       .btn-ghost {
         border: 1px solid var(--border);
         color: var(--text);
@@ -263,7 +281,9 @@
         color: var(--text);
         margin-bottom: 1rem;
       }
-      p:last-child { margin-bottom: 0; }
+      p:last-child {
+        margin-bottom: 0;
+      }
 
       /* ── FEATURE GRID ── */
       .feature-grid {
@@ -278,7 +298,9 @@
         border: 1px solid var(--border);
         border-radius: var(--radius);
         padding: 1.5rem;
-        transition: border-color 0.2s, transform 0.2s;
+        transition:
+          border-color 0.2s,
+          transform 0.2s;
       }
       .feature-card:hover {
         border-color: var(--accent);
@@ -375,7 +397,9 @@
         margin-top: 2.5rem;
       }
       @media (max-width: 760px) {
-        .split { grid-template-columns: 1fr; }
+        .split {
+          grid-template-columns: 1fr;
+        }
       }
 
       .card {
@@ -394,7 +418,9 @@
         gap: 0.6rem;
       }
 
-      .card p { font-size: 0.9rem; }
+      .card p {
+        font-size: 0.9rem;
+      }
 
       /* ── COMPARISON TABLE ── */
       .bd-table {
@@ -420,7 +446,9 @@
         border-bottom: 1px solid rgba(46, 49, 80, 0.5);
         vertical-align: top;
       }
-      .bd-table tr:last-child td { border-bottom: none; }
+      .bd-table tr:last-child td {
+        border-bottom: none;
+      }
       .bd-table td:first-child {
         color: var(--yellow);
         font-family: var(--mono);
@@ -434,7 +462,9 @@
         border-bottom: 1px solid transparent;
         transition: border-color 0.2s;
       }
-      a.link:hover { border-color: var(--accent); }
+      a.link:hover {
+        border-color: var(--accent);
+      }
 
       /* ── FOOTER ── */
       footer {
@@ -448,7 +478,9 @@
         color: #6b7399;
         text-decoration: none;
       }
-      footer a:hover { color: var(--text); }
+      footer a:hover {
+        color: var(--text);
+      }
       footer .footer-links {
         display: flex;
         justify-content: center;
@@ -459,7 +491,6 @@
     </style>
   </head>
   <body>
-
     <!-- ── NAV ── -->
     <nav>
       <a class="nav-brand" href="#">bfind</a>
@@ -468,7 +499,11 @@
         <li><a href="#features">Features</a></li>
         <li><a href="#install">Install</a></li>
         <li><a href="https://bsh.brightchain.org">BSH</a></li>
-        <li><a href="https://github.com/Digital-Defiance/findutils-brightdate">GitHub</a></li>
+        <li>
+          <a href="https://github.com/Digital-Defiance/findutils-brightdate"
+            >GitHub</a
+          >
+        </li>
       </ul>
     </nav>
 
@@ -478,7 +513,9 @@
       <h1>B<span>FIND</span> — BrightDate Findutils</h1>
       <p class="hero-sub">
         GNU findutils 4.10.0 re-dressed for the
-        <a class="link" href="https://bsh.brightchain.org"><strong>BrightDate</strong></a>
+        <a class="link" href="https://brightdate.brightchain.org"
+          ><strong>BrightDate</strong></a
+        >
         time system. <code>bfind</code>, <code>blocate</code>,
         <code>bupdatedb</code>, and <code>bxargs</code> — with
         <code>-after</code>/<code>-before</code> predicates, a
@@ -493,18 +530,19 @@
           <span class="dot dot-yellow"></span>
           <span class="dot dot-green"></span>
         </div>
+        <!-- prettier-ignore -->
         <div class="terminal-body">
           <div class="cmd-line"><span class="cmt"># files modified after BD 9600 (≈ Sep 2025) — no date parsing, no TZ</span></div>
-          <div class="cmd-line"><span class="prompt">$</span> <span class="cmd">bfind . -after 9600 -name '*.log' -printf '%Wt %p\n'</span></div>
+          <div class="cmd-line"><span class="prompt">$</span><span class="cmd">bfind . -after 9600 -name '*.log' -printf '%Wt %p\n'</span></div>
           <div class="cmd-line"><span class="out">9628.195697 ./app.log</span></div>
           <div class="cmd-line"><span class="out">9615.320041 ./audit.log</span></div>
-          <div class="cmd-line" style="margin-top:0.6rem"><span class="cmt"># how old is the newest source file? — plain float subtraction</span></div>
-          <div class="cmd-line"><span class="prompt">$</span> <span class="cmd">age=$(bfind . -name '*.c' -printf '%Wt\n' | sort -rn | head -1)</span></div>
-          <div class="cmd-line"><span class="prompt">$</span> <span class="cmd">echo "newest: BD $age — $(echo "($age - 9628) * 86400 / 3600" | bc) h old"</span></div>
+          <div class="cmd-line" style="margin-top: 0.6rem"><span class="cmt"># how old is the newest source file? — plain float subtraction</span></div>
+          <div class="cmd-line"><span class="prompt">$</span><span class="cmd">age=$(bfind . -name '*.c' -printf '%Wt\n' | sort -rn | head -1)</span></div>
+          <div class="cmd-line"><span class="prompt">$</span><span class="cmd">echo "newest: BD $age — $(echo "($age - 9628) * 86400 / 3600" | bc) h old"</span></div>
           <div class="cmd-line"><span class="out">newest: BD 9628.197104 — 4.7 h old</span></div>
-          <div class="cmd-line" style="margin-top:0.6rem"><span class="cmt"># database-backed search; DB timestamp shown as BD</span></div>
-          <div class="cmd-line"><span class="prompt">$</span> <span class="cmd">blocate kernel | head -3</span></div>
-          <div class="cmd-line"><span class="out">Database: /var/db/locate.database  (BD 9628.12)  6 423 144 entries</span></div>
+          <div class="cmd-line" style="margin-top: 0.6rem"><span class="cmt"># database-backed search; DB timestamp shown as BD</span></div>
+          <div class="cmd-line"><span class="prompt">$</span><span class="cmd">blocate kernel | head -3</span></div>
+          <div class="cmd-line"><span class="out">Database: /var/db/locate.database (BD 9628.12) 6 423 144 entries</span></div>
         </div>
       </div>
 
@@ -525,14 +563,16 @@
           <code>find</code>'s time predicates — <code>-mtime</code>,
           <code>-newer</code>, <code>-newermt</code> — are a perennial source of
           confusion: <code>-mtime -1</code> means "within the last 24 hours,
-          rounded down to integer days," <code>-newermt</code> needs an ISO
-          8601 string with the right timezone, and the results differ on Linux
-          vs macOS because <code>stat</code>'s timestamp resolution and epoch
+          rounded down to integer days," <code>-newermt</code> needs an ISO 8601
+          string with the right timezone, and the results differ on Linux vs
+          macOS because <code>stat</code>'s timestamp resolution and epoch
           handling differ subtly between the two. Every script that filters
           files by recency carries this invisible complexity.
         </p>
         <p>
-          <a class="link" href="https://bsh.brightchain.org"><strong>BSH (BrightShell)</strong></a>
+          <a class="link" href="https://bsh.brightchain.org"
+            ><strong>BSH (BrightShell)</strong></a
+          >
           showed that the fix is not a better date-parsing library — it's a
           better <em>time representation</em>. BrightDate is a single Float64:
           decimal days since the astronomical epoch J2000.0, on a TAI substrate.
@@ -543,10 +583,9 @@
           This fork carries that same fix into the findutils layer. If your
           shell prints BrightDate (BSH, or any shell using
           <code>$BRIGHTEPOCH</code>), and your file-search tool speaks
-          BrightDate, there is no translation step anywhere in the pipeline.
-          The number in your prompt is the number you pass to
-          <code>-after</code>, which is the number printed by
-          <code>-printf '%Wt'</code>.
+          BrightDate, there is no translation step anywhere in the pipeline. The
+          number in your prompt is the number you pass to <code>-after</code>,
+          which is the number printed by <code>-printf '%Wt'</code>.
         </p>
 
         <p
@@ -561,9 +600,9 @@
         >
           <strong style="color: var(--text-bright)">In one sentence:</strong>
           BrightDate is a timezone-free SI-day count since J2000.0
-          (2000-01-01T11:58:55.816 UTC). BD&nbsp;0.0 = the standard astronomical epoch.
-          BD&nbsp;9628 ≈ May 2026. <code>b − a = elapsed days</code>, no date
-          library required.
+          (2000-01-01T11:58:55.816 UTC). BD&nbsp;0.0 = the standard astronomical
+          epoch. BD&nbsp;9628 ≈ May 2026. <code>b − a = elapsed days</code>, no
+          date library required.
         </p>
 
         <div class="split">
@@ -571,12 +610,17 @@
             <h3>🔎 Old <code>find</code> pain</h3>
             <table class="bd-table">
               <thead>
-                <tr><th>Problem</th><th>What goes wrong</th></tr>
+                <tr>
+                  <th>Problem</th>
+                  <th>What goes wrong</th>
+                </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>-mtime -1</td>
-                  <td>Rounds to integer days from "now", not a clean boundary</td>
+                  <td>
+                    Rounds to integer days from "now", not a clean boundary
+                  </td>
                 </tr>
                 <tr>
                   <td>-newermt "2026-01-01"</td>
@@ -588,7 +632,9 @@
                 </tr>
                 <tr>
                   <td>Duration math</td>
-                  <td>Requires <code>date -d</code>, <code>gdate</code>, or Python</td>
+                  <td>
+                    Requires <code>date -d</code>, <code>gdate</code>, or Python
+                  </td>
                 </tr>
                 <tr>
                   <td>Daystart</td>
@@ -602,7 +648,10 @@
             <h3>✨ bfind fix</h3>
             <table class="bd-table">
               <thead>
-                <tr><th>Feature</th><th>What it does</th></tr>
+                <tr>
+                  <th>Feature</th>
+                  <th>What it does</th>
+                </tr>
               </thead>
               <tbody>
                 <tr>
@@ -639,13 +688,14 @@
         <h2>BrightDate across the whole pipeline.</h2>
         <p>
           Every time-sensitive surface in findutils now speaks the same float.
-          The changes are surgical: all four binaries are renamed
-          (<code>b</code> prefix) so they coexist with system
+          The changes are surgical: all four binaries are renamed (<code
+            >b</code
+          >
+          prefix) so they coexist with system
           <code>find</code>/<code>locate</code>/<code>xargs</code>.
         </p>
 
         <div class="feature-grid">
-
           <div class="feature-card">
             <div class="feature-icon">⏩</div>
             <h3><code>-after</code> / <code>-before</code></h3>
@@ -654,7 +704,9 @@
               string parsing, no timezone argument. Both compare against
               <code>mtime</code> by default.
             </p>
-            <pre style="margin-top:0.75rem;font-size:0.78rem"><code># files touched after BD 9600
+            <pre
+              style="margin-top: 0.75rem; font-size: 0.78rem"
+            ><code># files touched after BD 9600
 bfind . -after 9600 -name '*.py'
 
 # files older than BD 9000
@@ -663,15 +715,20 @@ bfind . -before 9000 -name '*.log' -delete</code></pre>
 
           <div class="feature-card">
             <div class="feature-icon">📋</div>
-            <h3><code>%Wt</code> / <code>%Wa</code> / <code>%Wc</code> / <code>%WB</code></h3>
+            <h3>
+              <code>%Wt</code> / <code>%Wa</code> / <code>%Wc</code> /
+              <code>%WB</code>
+            </h3>
             <p>
               A new <code>%W</code> printf family prints file timestamps as
               BrightDate decimals. <code>t</code> = mtime, <code>a</code> =
-              atime, <code>c</code> = ctime, <code>B</code> = birth time.
-              Output is plain float — sort with <code>sort -n</code>, diff with
+              atime, <code>c</code> = ctime, <code>B</code> = birth time. Output
+              is plain float — sort with <code>sort -n</code>, diff with
               <code>awk</code>.
             </p>
-            <pre style="margin-top:0.75rem;font-size:0.78rem"><code>bfind . -printf '%Wt %p\n' | sort -rn | head -5
+            <pre
+              style="margin-top: 0.75rem; font-size: 0.78rem"
+            ><code>bfind . -printf '%Wt %p\n' | sort -rn | head -5
 # 9628.197104 ./src/pred.c
 # 9628.195697 ./src/parser.c
 # …</code></pre>
@@ -687,7 +744,9 @@ bfind . -before 9000 -name '*.log' -delete</code></pre>
               (the same on every machine). Pair with <code>-mtime</code> for
               "since BD boundary" queries.
             </p>
-            <pre style="margin-top:0.75rem;font-size:0.78rem"><code># files changed since the start of BD 9628
+            <pre
+              style="margin-top: 0.75rem; font-size: 0.78rem"
+            ><code># files changed since the start of BD 9628
 bfind . -daystart -mtime -1</code></pre>
           </div>
 
@@ -701,7 +760,9 @@ bfind . -daystart -mtime -1</code></pre>
               original ISO/file-path logic applies, so old scripts continue to
               work unchanged.
             </p>
-            <pre style="margin-top:0.75rem;font-size:0.78rem"><code>bfind . -newermt 9628.0 -name '*.c'
+            <pre
+              style="margin-top: 0.75rem; font-size: 0.78rem"
+            ><code>bfind . -newermt 9628.0 -name '*.c'
 bfind . -newerat 9600 -newer 9610</code></pre>
           </div>
 
@@ -714,7 +775,9 @@ bfind . -newerat 9600 -newer 9610</code></pre>
               compare "how stale is my locate database" against
               <code>$BRIGHTEPOCH</code> with plain subtraction.
             </p>
-            <pre style="margin-top:0.75rem;font-size:0.78rem"><code>$ blocate --statistics
+            <pre
+              style="margin-top: 0.75rem; font-size: 0.78rem"
+            ><code>$ blocate --statistics
 Database: /var/db/locate.database
   Created: BD 9628.12 (5.32 h ago)
   Entries: 6 423 144</code></pre>
@@ -725,39 +788,46 @@ Database: /var/db/locate.database
             <h3>Rust-quality C core</h3>
             <p>
               The BrightDate conversion lives in a single
-              <code>find/brightdate.c</code> / <code>brightdate.h</code> with
-              a 28-entry leap-second table. The same TAI/J2000 math as the
-              <a class="link" href="https://crates.io/crates/brightdate">Rust crate</a>
-              and the <a class="link" href="https://www.npmjs.com/package/@brightchain/brightdate">npm package</a>
+              <code>find/brightdate.c</code> / <code>brightdate.h</code> with a
+              28-entry leap-second table. The same TAI/J2000 math as the
+              <a class="link" href="https://crates.io/crates/brightdate"
+                >Rust crate</a
+              >
+              and the
+              <a
+                class="link"
+                href="https://www.npmjs.com/package/@brightchain/brightdate"
+                >npm package</a
+              >
               — one formula, every platform.
             </p>
           </div>
-
         </div>
 
         <!-- live demo terminal -->
         <div
           class="terminal"
-          style="display:block; margin-top:2rem; max-width:100%"
+          style="display: block; margin-top: 2rem; max-width: 100%"
         >
           <div class="terminal-bar">
             <span class="dot dot-red"></span>
             <span class="dot dot-yellow"></span>
             <span class="dot dot-green"></span>
           </div>
+          <!-- prettier-ignore -->
           <div class="terminal-body">
             <div class="cmd-line"><span class="cmt"># print the 10 most-recently modified files as BD + path</span></div>
-            <div class="cmd-line"><span class="prompt">$</span> <span class="cmd">bfind . -maxdepth 3 -type f -printf '%Wt\t%p\n' | sort -rn | head -10</span></div>
-            <div class="cmd-line"><span class="out">9628.197104	./find/pred.c</span></div>
-            <div class="cmd-line"><span class="out">9628.195697	./find/parser.c</span></div>
-            <div class="cmd-line"><span class="out">9628.194201	./find/brightdate.c</span></div>
-            <div class="cmd-line" style="margin-top:0.6rem"><span class="cmt"># find C files modified since BD 9625 and run clang-format on them</span></div>
-            <div class="cmd-line"><span class="prompt">$</span> <span class="cmd">bfind src -after 9625 -name '*.c' -print0 | bxargs -0 clang-format -i</span></div>
-            <div class="cmd-line" style="margin-top:0.6rem"><span class="cmt"># age of every log — float subtraction in awk, no date library</span></div>
-            <div class="cmd-line"><span class="prompt">$</span> <span class="cmd">bfind /var/log -name '*.log' -printf '%Wt %p\n' \</span></div>
-            <div class="cmd-line"><span class="prompt"> </span> <span class="cmd">  | awk '{printf "%.4f days old  %s\n", 9628.2 - $1, $2}'</span></div>
-            <div class="cmd-line"><span class="out">0.0042 days old  /var/log/system.log</span></div>
-            <div class="cmd-line"><span class="out">3.1804 days old  /var/log/install.log</span></div>
+            <div class="cmd-line"><span class="prompt">$</span><span class="cmd">bfind . -maxdepth 3 -type f -printf '%Wt\t%p\n' | sort -rn | head -10</span></div>
+            <div class="cmd-line"><span class="out">9628.197104 ./find/pred.c</span></div>
+            <div class="cmd-line"><span class="out">9628.195697 ./find/parser.c</span></div>
+            <div class="cmd-line"><span class="out">9628.194201 ./find/brightdate.c</span></div>
+            <div class="cmd-line" style="margin-top: 0.6rem"><span class="cmt"># find C files modified since BD 9625 and run clang-format on them</span></div>
+            <div class="cmd-line"><span class="prompt">$</span><span class="cmd">bfind src -after 9625 -name '*.c' -print0 | bxargs -0 clang-format -i</span></div>
+            <div class="cmd-line" style="margin-top: 0.6rem"><span class="cmt"># age of every log — float subtraction in awk, no date library</span></div>
+            <div class="cmd-line"><span class="prompt">$</span><span class="cmd">bfind /var/log -name '*.log' -printf '%Wt %p\n' \</span></div>
+            <div class="cmd-line"><span class="prompt"> </span><span class="cmd">  | awk '{printf "%.4f days old %s\n", 9628.2 - $1, $2}'</span></div>
+            <div class="cmd-line"><span class="out">0.0042 days old /var/log/system.log</span></div>
+            <div class="cmd-line"><span class="out">3.1804 days old /var/log/install.log</span></div>
           </div>
         </div>
       </div>
@@ -770,7 +840,6 @@ Database: /var/db/locate.database
         <h2>Install in seconds.</h2>
 
         <div class="steps">
-
           <div class="step">
             <div class="step-num">1</div>
             <div class="step-body">
@@ -784,7 +853,7 @@ Database: /var/db/locate.database
             <div class="step-body">
               <h3>Install the tools</h3>
               <pre><code>brew install digital-defiance/tap/findutils-brightdate</code></pre>
-              <p style="margin-top:0.5rem">
+              <p style="margin-top: 0.5rem">
                 This installs <code>bfind</code>, <code>blocate</code>,
                 <code>bupdatedb</code>, and <code>bxargs</code> into
                 <code>$(brew --prefix)/bin</code>. They coexist with system
@@ -801,14 +870,13 @@ Database: /var/db/locate.database
               <pre><code>bfind ~ -maxdepth 2 -type f -printf '%Wt %p\n' | sort -rn | head -5</code></pre>
             </div>
           </div>
-
         </div>
 
-        <p style="margin-top:2rem;font-size:0.9rem">
-          <strong style="color:var(--text-bright)">Build from source</strong>
+        <p style="margin-top: 2rem; font-size: 0.9rem">
+          <strong style="color: var(--text-bright)">Build from source</strong>
         </p>
 
-        <div class="steps" style="margin-top:1rem">
+        <div class="steps" style="margin-top: 1rem">
           <div class="step">
             <div class="step-num">A</div>
             <div class="step-body">
@@ -843,12 +911,15 @@ make -C xargs bxargs</code></pre>
           </div>
         </div>
 
-        <p style="margin-top:2rem; font-size:0.875rem">
+        <p style="margin-top: 2rem; font-size: 0.875rem">
           Want BrightDate throughout your <em>whole shell</em>? Install
-          <a class="link" href="https://bsh.brightchain.org"><strong>BSH (BrightShell)</strong></a>
+          <a class="link" href="https://bsh.brightchain.org"
+            ><strong>BSH (BrightShell)</strong></a
+          >
           — a zsh-compatible shell where <code>date</code>, <code>ls -l</code>,
-          <code>stat</code>, <code>history -d</code>, and <code>$BRIGHTEPOCH</code>
-          all speak the same float. <code>bfind</code> fits right in.
+          <code>stat</code>, <code>history -d</code>, and
+          <code>$BRIGHTEPOCH</code> all speak the same float.
+          <code>bfind</code> fits right in.
         </p>
       </div>
     </section>
@@ -870,10 +941,14 @@ make -C xargs bxargs</code></pre>
               and <code>$BRIGHTEPOCH</code>. The natural home for
               <code>bfind</code> pipelines.
             </p>
-            <p style="margin-top:0.75rem">
-              <a class="link" href="https://bsh.brightchain.org">bsh.brightchain.org</a>
+            <p style="margin-top: 0.75rem">
+              <a class="link" href="https://bsh.brightchain.org"
+                >bsh.brightchain.org</a
+              >
               ·
-              <a class="link" href="https://github.com/Digital-Defiance/bsh">GitHub</a>
+              <a class="link" href="https://github.com/Digital-Defiance/bsh"
+                >GitHub</a
+              >
             </p>
           </div>
 
@@ -883,13 +958,19 @@ make -C xargs bxargs</code></pre>
             <p>
               The Rust crate powering BSH internally. Also ships standalone CLI
               tools (<code>bdate</code>, <code>btime</code>,
-              <code>buptime</code>, <code>bcal</code>, <code>bwatch</code>)
-              via the Homebrew tap.
+              <code>buptime</code>, <code>bcal</code>, <code>bwatch</code>) via
+              the Homebrew tap.
             </p>
-            <p style="margin-top:0.75rem">
-              <a class="link" href="https://crates.io/crates/brightdate">crates.io</a>
+            <p style="margin-top: 0.75rem">
+              <a class="link" href="https://crates.io/crates/brightdate"
+                >crates.io</a
+              >
               ·
-              <a class="link" href="https://github.com/Digital-Defiance/brightdate-rust">GitHub</a>
+              <a
+                class="link"
+                href="https://github.com/Digital-Defiance/brightdate-rust"
+                >GitHub</a
+              >
             </p>
           </div>
 
@@ -897,13 +978,21 @@ make -C xargs bxargs</code></pre>
             <div class="feature-icon">📦</div>
             <h3>npm — <code>@brightchain/brightdate</code></h3>
             <p>
-              TypeScript/JavaScript library. Same J2000.0 / TAI semantics,
-              same epoch. Works in Node.js, Deno, and the browser.
+              TypeScript/JavaScript library. Same J2000.0 / TAI semantics, same
+              epoch. Works in Node.js, Deno, and the browser.
             </p>
-            <p style="margin-top:0.75rem">
-              <a class="link" href="https://www.npmjs.com/package/@brightchain/brightdate">npm</a>
+            <p style="margin-top: 0.75rem">
+              <a
+                class="link"
+                href="https://www.npmjs.com/package/@brightchain/brightdate"
+                >npm</a
+              >
               ·
-              <a class="link" href="https://github.com/Digital-Defiance/brightdate">GitHub</a>
+              <a
+                class="link"
+                href="https://github.com/Digital-Defiance/brightdate"
+                >GitHub</a
+              >
             </p>
           </div>
 
@@ -915,7 +1004,9 @@ make -C xargs bxargs</code></pre>
               <code>bfind</code>, the Rust CLI tools, and BSH itself from a
               single tap.
             </p>
-            <pre style="margin-top:0.75rem;font-size:0.78rem"><code>brew tap digital-defiance/tap
+            <pre
+              style="margin-top: 0.75rem; font-size: 0.78rem"
+            ><code>brew tap digital-defiance/tap
 brew install findutils-brightdate
 brew install bdate btime buptime bcal bwatch bsh</code></pre>
           </div>
@@ -927,20 +1018,29 @@ brew install bdate btime buptime bcal bwatch bsh</code></pre>
     <footer>
       <p>
         findutils-brightdate — a fork of
-        <a href="https://www.gnu.org/software/findutils/">GNU findutils 4.10.0</a>
+        <a href="https://www.gnu.org/software/findutils/"
+          >GNU findutils 4.10.0</a
+        >
         by
         <a href="https://github.com/Digital-Defiance">Digital Defiance</a>.
         Released under the
-        <a href="https://github.com/Digital-Defiance/findutils-brightdate/blob/main/COPYING">GPL-3.0-or-later</a>.
+        <a
+          href="https://github.com/Digital-Defiance/findutils-brightdate/blob/main/COPYING"
+          >GPL-3.0-or-later</a
+        >.
       </p>
       <div class="footer-links">
-        <a href="https://github.com/Digital-Defiance/findutils-brightdate">Source</a>
-        <a href="https://github.com/Digital-Defiance/findutils-brightdate/blob/main/README.md">README</a>
+        <a href="https://github.com/Digital-Defiance/findutils-brightdate"
+          >Source</a
+        >
+        <a
+          href="https://github.com/Digital-Defiance/findutils-brightdate/blob/main/README.md"
+          >README</a
+        >
         <a href="https://bsh.brightchain.org">BSH</a>
         <a href="https://brightdate.brightchain.org">BrightDate</a>
         <a href="https://github.com/Digital-Defiance">Digital Defiance</a>
       </div>
     </footer>
-
   </body>
 </html>
