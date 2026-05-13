@@ -339,7 +339,7 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(man1dir)"
 PROGRAMS = $(bin_PROGRAMS)
-bxargs_SOURCES = bxargs.c
+bxargs_SOURCES = xargs.c
 bxargs_OBJECTS = bxargs.$(OBJEXT)
 bxargs_LDADD = $(LDADD)
 am__DEPENDENCIES_1 =
@@ -375,8 +375,8 @@ AM_V_CCLD = $(am__v_CCLD_@AM_V@)
 am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V@)
 am__v_CCLD_0 = @echo "  CCLD    " $@;
 am__v_CCLD_1 = 
-SOURCES = bxargs.c
-DIST_SOURCES = bxargs.c
+SOURCES = xargs.c
+DIST_SOURCES = xargs.c
 RECURSIVE_TARGETS = all-recursive check-recursive cscopelist-recursive \
 	ctags-recursive dvi-recursive html-recursive info-recursive \
 	install-data-recursive install-dvi-recursive \

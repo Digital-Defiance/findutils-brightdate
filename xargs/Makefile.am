@@ -18,6 +18,7 @@ AM_CFLAGS = $(WARN_CFLAGS)
 localedir = $(datadir)/locale
 bin_PROGRAMS = bxargs
 man_MANS = bxargs.1
+bxargs_SOURCES = xargs.c
 AM_CPPFLAGS = -I.. -I../gl/lib -I$(top_srcdir)/gl/lib -I$(top_srcdir)/lib -DLOCALEDIR=\"$(localedir)\"
 LDADD = ../lib/libfind.a ../gl/lib/libgnulib.a $(LIB_CLOSE) $(LIBINTL) $(LIB_SETLOCALE_NULL) $(LIB_MBRTOWC)
 EXTRA_DIST = $(man_MANS)
