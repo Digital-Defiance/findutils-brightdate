@@ -42,7 +42,7 @@ $(PROGRAMS) $(LIBPROGRAMS): ../lib/libfind.a ../gl/lib/libgnulib.a
 # We generate updatedb from the Makefile rather than with AC_OUTPUT in
 # configure.ac in order to allow the user better control of what goes
 # into it by setting Makefile variables.
-	bupdatedb: updatedb.sh Makefile
+bupdatedb: updatedb.sh Makefile
 	rm -f $@
 	find=`echo bfind|sed '$(transform)'`; \
 	frcode=`echo frcode|sed '$(transform)'`; \

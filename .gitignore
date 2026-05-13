@@ -1,6 +1,7 @@
 
 # findutils-brightdate .gitignore
 # ================================
+homebrew-tap
 
 # -----------------------------------------------------------------------
 # Autotools build system generated files
